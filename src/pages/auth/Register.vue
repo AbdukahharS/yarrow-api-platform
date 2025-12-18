@@ -1,9 +1,103 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useToast } from 'vue-toastification'
 import Logo from '../../assets/logo.svg'
+
+const router = useRouter()
+const toast = useToast()
 
 const step = ref(1)
 const email = ref('')
+const password = ref('')
+const confirmPassword = ref('')
+const companyName = ref('')
+const errors = ref({ email: '', password: '', confirmPassword: '', companyName: '' })
+const isLoading = ref(false)
+
+const validateEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email)
+}
+
+const handleStep1 = () => {
+  errors.value.email = ''
+
+  if (!email.value.trim()) {
+    errors.value.email = 'Email is required'
+    return
+  }
+
+  if (!validateEmail(email.value)) {
+    errors.value.email = 'Please enter a valid email address'
+    return
+  }
+
+  // Check if email already exists
+  const dummyUsers = JSON.parse(localStorage.getItem('dummyUsers') || '[]')
+  if (dummyUsers.some((u: any) => u.email === email.value)) {
+    errors.value.email = 'This email is already registered'
+    return
+  }
+
+  step.value = 2
+}
+
+const handleStep2 = () => {
+  errors.value.password = ''
+  errors.value.confirmPassword = ''
+
+  if (!password.value) {
+    errors.value.password = 'Password is required'
+    return
+  }
+
+  if (password.value.length < 6) {
+    errors.value.password = 'Password must be at least 6 characters'
+    return
+  }
+
+  if (!confirmPassword.value) {
+    errors.value.confirmPassword = 'Please confirm your password'
+    return
+  }
+
+  if (password.value !== confirmPassword.value) {
+    errors.value.confirmPassword = 'Passwords do not match'
+    return
+  }
+
+  step.value = 3
+}
+
+const handleCreateAccount = () => {
+  errors.value.companyName = ''
+
+  if (!companyName.value.trim()) {
+    errors.value.companyName = 'Company name is required'
+    return
+  }
+
+  // Simulate API call
+  isLoading.value = true
+
+  setTimeout(() => {
+    // Save to localStorage
+    const dummyUsers = JSON.parse(localStorage.getItem('dummyUsers') || '[]')
+    dummyUsers.push({
+      email: email.value,
+      password: password.value,
+      company: companyName.value
+    })
+    localStorage.setItem('dummyUsers', JSON.stringify(dummyUsers))
+
+    isLoading.value = false
+
+    // Show success and redirect to sign in
+    toast.success('Account created successfully! Please sign in.')
+    router.push('/signin')
+  }, 1000)
+}
 </script>
 
 <template>
@@ -21,35 +115,65 @@ const email = ref('')
 
       <template v-if="step === 1">
         <label for="email">Email</label><br />
-        <input type="text" id="email" v-model="email" />
+        <input
+          type="text"
+          id="email"
+          v-model="email"
+          :class="{ error: errors.email }"
+          placeholder="you@example.com"
+        />
+        <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
 
-        <button @click="() => (step = 2)" style="margin-bottom: 76px">
+        <button @click="handleStep1" style="margin-bottom: 76px">
           Continue
         </button>
       </template>
 
       <template v-if="step === 2">
         <label for="password">Password</label><br />
-        <input type="password" id="password" />
+        <input
+          type="password"
+          id="password"
+          v-model="password"
+          :class="{ error: errors.password }"
+          placeholder="At least 6 characters"
+        />
+        <span v-if="errors.password" class="error-message">{{ errors.password }}</span>
 
         <label for="confirmPassword" style="margin-top: 16px; display: block"
           >Confirm Password</label
         >
-        <input type="password" id="confirmPassword" />
+        <input
+          type="password"
+          id="confirmPassword"
+          v-model="confirmPassword"
+          :class="{ error: errors.confirmPassword }"
+          placeholder="Re-enter your password"
+        />
+        <span v-if="errors.confirmPassword" class="error-message">{{ errors.confirmPassword }}</span>
 
         <div class="buttons">
           <button @click="() => (step = 1)" class="back">Back</button>
-          <button @click="() => (step = 3)">Next</button>
+          <button @click="handleStep2">Next</button>
         </div>
       </template>
 
       <template v-if="step === 3">
         <label for="companyName">Company Name</label><br />
-        <input type="text" id="companyName" />
+        <input
+          type="text"
+          id="companyName"
+          v-model="companyName"
+          :class="{ error: errors.companyName }"
+          :disabled="isLoading"
+        />
+        <span v-if="errors.companyName" class="error-message">{{ errors.companyName }}</span>
 
         <div class="buttons">
-          <button @click="() => (step = 2)" class="back">Back</button>
-          <button @click="() => (step = 3)">Create Account</button>
+          <button @click="() => (step = 2)" class="back" :disabled="isLoading">Back</button>
+          <button @click="handleCreateAccount" :disabled="isLoading">
+            {{ isLoading ? 'Creating...' : 'Create Account' }}
+          </button>
         </div>
       </template>
 
@@ -159,6 +283,24 @@ const email = ref('')
       &:focus {
         border-color: #717182;
       }
+
+      &.error {
+        border-color: #ef4444;
+        background: #fef2f2;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    .error-message {
+      display: block;
+      color: #ef4444;
+      font-size: 12px;
+      margin-top: 4px;
+      font-weight: 400;
     }
 
     .stack {
@@ -193,9 +335,15 @@ const email = ref('')
       font-size: 14px;
       line-height: 20px;
       transition: all 0.2s ease-in-out;
+      cursor: pointer;
 
-      &:hover {
+      &:hover:not(:disabled) {
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
       }
     }
 

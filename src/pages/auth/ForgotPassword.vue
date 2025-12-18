@@ -2,12 +2,58 @@
 import Logo from '../../assets/logo.svg'
 import ArrowLeft from '../../assets/arrow-left.svg?component'
 import { ref } from 'vue'
+import { useToast } from 'vue-toastification'
 
+const toast = useToast()
 const isSent = ref(false)
 const email = ref('')
+const error = ref('')
+const isLoading = ref(false)
+
+const validateEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email)
+}
 
 const handleSend = () => {
-  isSent.value = true
+  error.value = ''
+
+  if (!email.value.trim()) {
+    error.value = 'Email is required'
+    return
+  }
+
+  if (!validateEmail(email.value)) {
+    error.value = 'Please enter a valid email address'
+    return
+  }
+
+  // Simulate API call
+  isLoading.value = true
+
+  setTimeout(() => {
+    // Check if email exists
+    const dummyUsers = JSON.parse(localStorage.getItem('dummyUsers') || '[]')
+    const userExists = dummyUsers.some((u: any) => u.email === email.value)
+
+    if (!userExists) {
+      error.value = 'No account found with this email address'
+      isLoading.value = false
+      return
+    }
+
+    isSent.value = true
+    isLoading.value = false
+  }, 1000)
+}
+
+const handleResend = () => {
+  isLoading.value = true
+
+  setTimeout(() => {
+    isLoading.value = false
+    toast.success('Password reset link sent again!')
+  }, 1000)
 }
 </script>
 
@@ -29,10 +75,13 @@ const handleSend = () => {
           id="email"
           placeholder="you@example.com"
           v-model="email"
+          :class="{ error: error }"
+          :disabled="isLoading"
         />
+        <span v-if="error" class="error-message">{{ error }}</span>
 
-        <button style="margin-bottom: 10px" @click="handleSend">
-          Send Reset Link
+        <button style="margin-bottom: 10px" @click="handleSend" :disabled="isLoading">
+          {{ isLoading ? 'Sending...' : 'Send Reset Link' }}
         </button>
 
         <p class="redirect">
@@ -46,7 +95,9 @@ const handleSend = () => {
           <small>Click the link in the email to reset your password.</small>
         </p>
 
-        <button style="margin-bottom: 10px">Send Again</button>
+        <button style="margin-bottom: 10px" @click="handleResend" :disabled="isLoading">
+          {{ isLoading ? 'Sending...' : 'Send Again' }}
+        </button>
 
         <p class="redirect">
           <router-link
@@ -54,6 +105,7 @@ const handleSend = () => {
             @click="
               () => {
                 isSent = false
+                error = ''
               }
             "
             ><ArrowLeft />Change Email</router-link
@@ -122,6 +174,24 @@ const handleSend = () => {
       &:focus {
         border-color: #717182;
       }
+
+      &.error {
+        border-color: #ef4444;
+        background: #fef2f2;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    .error-message {
+      display: block;
+      color: #ef4444;
+      font-size: 12px;
+      margin-top: 4px;
+      font-weight: 400;
     }
 
     .stack {
@@ -156,9 +226,15 @@ const handleSend = () => {
       font-size: 14px;
       line-height: 20px;
       transition: all 0.2s ease-in-out;
+      cursor: pointer;
 
-      &:hover {
+      &:hover:not(:disabled) {
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
       }
     }
 

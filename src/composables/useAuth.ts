@@ -2,29 +2,41 @@ import { ref } from 'vue'
 
 const isAuthenticated = ref(false)
 
+// Initialize auth state from localStorage
+const initializeAuth = () => {
+  const authUser = localStorage.getItem('authUser')
+  isAuthenticated.value = !!authUser
+}
+
+// Initialize on module load
+initializeAuth()
+
 export function useAuth() {
   const login = () => {
     isAuthenticated.value = true
-    // Add your login logic here (e.g., store token)
   }
 
   const logout = () => {
     isAuthenticated.value = false
-    // Add your logout logic here (e.g., remove token)
+    localStorage.removeItem('authUser')
   }
 
   const checkAuth = (): boolean => {
-    // Add your authentication check logic here
-    // For example, check if token exists in localStorage
-    // const token = localStorage.getItem('auth-token')
-    // isAuthenticated.value = !!token
+    const authUser = localStorage.getItem('authUser')
+    isAuthenticated.value = !!authUser
     return isAuthenticated.value
+  }
+
+  const getCurrentUser = () => {
+    const authUser = localStorage.getItem('authUser')
+    return authUser ? JSON.parse(authUser) : null
   }
 
   return {
     isAuthenticated,
     login,
     logout,
-    checkAuth
+    checkAuth,
+    getCurrentUser
   }
 }
