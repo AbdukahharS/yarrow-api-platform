@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from '../assets/logo.svg'
+import Logo from '../../assets/logo.svg'
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import Logo from '../assets/logo.svg'
         <label for="password">Password</label>
         <router-link to="/forgot-password">Forgot password?</router-link>
       </div>
-      <input type="password" id="email" />
+      <input type="password" id="password" />
 
       <button>Log In</button>
 
