@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
-import { useAuth } from '../composables/useAuth'
+// import { useRouter } from 'vue-router'
+// import { useAuth } from '../composables/useAuth'
 import { useTheme } from '../composables/useTheme'
 import { Line } from 'vue-chartjs'
 import {
@@ -20,9 +20,9 @@ import Book from '../assets/icons/book.svg?component'
 import CreditCard from '../assets/icons/credit-card.svg?component'
 import TrendingUp from '../assets/icons/tending-up.svg?component'
 
-const { logout } = useAuth()
+// const { logout } = useAuth()
 const { theme } = useTheme()
-const router = useRouter()
+// const router = useRouter()
 
 ChartJS.register(
   Title,
@@ -34,10 +34,10 @@ ChartJS.register(
   PointElement
 )
 
-const handleLogout = () => {
-  logout()
-  router.push('/signin')
-}
+// const handleLogout = () => {
+//   logout()
+//   router.push('/signin')
+// }
 
 // Get CSS variables
 const getThemeColor = (variable: string) => {
