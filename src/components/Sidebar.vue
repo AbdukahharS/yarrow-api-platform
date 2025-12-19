@@ -81,7 +81,7 @@ const pages = [
           color: var(--text-primary);
 
           &:hover {
-            background: var(--primary-light);
+            background: color-mix(in srgb, var(--primary-color) 10%, transparent);
           }
 
           .icon {
@@ -90,7 +90,7 @@ const pages = [
         }
 
         &.active {
-          background: var(--primary-light);
+          background: color-mix(in srgb, var(--primary-color) 10%, transparent);
           color: var(--primary-color);
 
           &::before {

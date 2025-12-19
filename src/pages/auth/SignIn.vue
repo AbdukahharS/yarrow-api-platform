@@ -241,7 +241,7 @@ const handleSubmit = async () => {
       cursor: pointer;
 
       &:hover:not(:disabled) {
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
+        box-shadow: var(--shadow-md);
       }
 
       &:disabled {
