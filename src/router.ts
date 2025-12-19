@@ -7,31 +7,31 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'Dashboard',
     component: () => import('./pages/Dashboard.vue'),
-    meta: { requiresAuth: true }
+    meta: { requiresAuth: true },
   },
   {
     path: '/signin',
     name: 'SignIn',
     component: () => import('./pages/auth/SignIn.vue'),
-    meta: { requiresAuth: false }
+    meta: { requiresAuth: false, hideLayout: true },
   },
   {
     path: '/register',
     name: 'Register',
     component: () => import('./pages/auth/Register.vue'),
-    meta: { requiresAuth: false }
+    meta: { requiresAuth: false, hideLayout: true },
   },
   {
     path: '/forgot-password',
     name: 'Forgot Password',
     component: () => import('./pages/auth/ForgotPassword.vue'),
-    meta: { requiresAuth: false }
+    meta: { requiresAuth: false, hideLayout: true },
   },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 
 // Navigation guard for protected routes

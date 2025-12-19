@@ -5,7 +5,22 @@
 }
 
 :root {
-  --primary-color: #FF6900;
+  --primary-color: #ff6900;
+  --primary-light: #fff7ed;
+
+  /* Light mode colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f3f5;
+  --bg-tertiary: #f9fafb;
+  --text-primary: #0a0a0a;
+  --text-secondary: #717182;
+  --text-tertiary: #4a5565;
+  --border-color: #e5e7eb;
+  --input-bg: #f3f3f5;
+  --input-border: #f3f3f5;
+  --input-focus: #717182;
+  --error-bg: #fef2f2;
+  --error-color: #ef4444;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,4 +32,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {cursor: pointer;}
+:root.dark {
+  /* Dark mode colors */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #141414;
+  --text-primary: #f3f3f5;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #8b8b95;
+  --border-color: #2a2a2a;
+  --input-bg: #1a1a1a;
+  --input-border: #2a2a2a;
+  --input-focus: #a1a1aa;
+  --error-bg: #2a1a1a;
+  --error-color: #f87171;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+}

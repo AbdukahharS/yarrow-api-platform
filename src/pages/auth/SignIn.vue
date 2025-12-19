@@ -69,7 +69,9 @@ const handleSubmit = async () => {
 
 <template>
   <div class="container">
-    <img :src="Logo" alt="Yarrow Logo" />
+    <div class="header">
+      <img :src="Logo" alt="Yarrow Logo" />
+    </div>
 
     <div class="form">
       <h2>API Platform</h2>
@@ -123,13 +125,19 @@ const handleSubmit = async () => {
   gap: 100px;
   padding: 10% 30px;
 
-  img {
-    margin: 0 auto;
-    display: block;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   .form {
-    border: 1px solid #0000001a;
+    border: 1px solid var(--border-color);
     border-radius: 14px;
     padding: 24px;
 
@@ -144,13 +152,13 @@ const handleSubmit = async () => {
       text-align: center;
       font-size: 16px;
       font-weight: 400;
-      color: #717182;
+      color: var(--text-secondary);
       margin-top: 28px;
     }
 
     label {
       font-weight: 500;
-      color: #0a0a0a;
+      color: var(--text-primary);
       font-size: 14px;
       margin-top: 4px;
       margin-bottom: 8px;
@@ -158,24 +166,24 @@ const handleSubmit = async () => {
     }
 
     input {
-      border: 2px solid #f3f3f5;
-      background: #f3f3f5;
+      border: 2px solid var(--input-border);
+      background: var(--input-bg);
       border-radius: 8px;
       width: 100%;
       padding: 9.5px 12px;
       font-size: 14px;
       font-weight: 400;
-      color: #717182;
+      color: var(--text-secondary);
       outline: none;
       transition: all 0.2s ease-in-out;
 
       &:focus {
-        border-color: #717182;
+        border-color: var(--input-focus);
       }
 
       &.error {
-        border-color: #ef4444;
-        background: #fef2f2;
+        border-color: var(--error-color);
+        background: var(--error-bg);
       }
 
       &:disabled {
@@ -186,7 +194,7 @@ const handleSubmit = async () => {
 
     .error-message {
       display: block;
-      color: #ef4444;
+      color: var(--error-color);
       font-size: 12px;
       margin-top: 4px;
       font-weight: 400;
@@ -245,7 +253,7 @@ const handleSubmit = async () => {
     .redirect {
         text-align: center;
         margin-top: 16px;
-        color: #4A5565;
+        color: var(--text-tertiary);
         font-size: 14px;
         font-weight: 400;
 
