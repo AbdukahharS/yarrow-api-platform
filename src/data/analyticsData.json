@@ -1,0 +1,325 @@
+{
+  "requestLogs": [
+    { "timestamp": "2024-12-12 10:45:23", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "12ms", "bytes": "2.4 KB", "apiKey": "production", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:45:18", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "45ms", "bytes": "1.2 KB", "apiKey": "production", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:45:15", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "23ms", "bytes": "512 B", "apiKey": "production", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:45:12", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "156ms", "bytes": "8.9 KB", "apiKey": "production", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:45:08", "endpoint": "/api/v1/users", "method": "PUT", "status": 200, "responseTime": "34ms", "bytes": "1.8 KB", "apiKey": "development", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:45:05", "endpoint": "/api/v1/auth", "method": "POST", "status": 500, "responseTime": "89ms", "bytes": "256 B", "apiKey": "production", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:45:01", "endpoint": "/api/v1/products", "method": "DELETE", "status": 204, "responseTime": "18ms", "bytes": "0 B", "apiKey": "production", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:44:55", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "3.1 KB", "apiKey": "mobile", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:44:50", "endpoint": "/api/v1/orders", "method": "POST", "status": 201, "responseTime": "52ms", "bytes": "1.5 KB", "apiKey": "production", "date": "Dec 12" },
+    { "timestamp": "2024-12-12 10:44:45", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "142ms", "bytes": "9.2 KB", "apiKey": "staging", "date": "Dec 12" },
+
+    { "timestamp": "2024-12-11 15:30:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "3.1 KB", "apiKey": "development", "date": "Dec 11" },
+    { "timestamp": "2024-12-11 15:30:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "20ms", "bytes": "4.5 KB", "apiKey": "development", "date": "Dec 11" },
+    { "timestamp": "2024-12-11 15:30:35", "endpoint": "/api/v1/orders", "method": "POST", "status": 201, "responseTime": "55ms", "bytes": "1.1 KB", "apiKey": "mobile", "date": "Dec 11" },
+    { "timestamp": "2024-12-11 15:30:30", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "120ms", "bytes": "512 B", "apiKey": "development", "date": "Dec 11" },
+    { "timestamp": "2024-12-11 15:30:25", "endpoint": "/api/v1/users", "method": "PUT", "status": 200, "responseTime": "38ms", "bytes": "2.1 KB", "apiKey": "production", "date": "Dec 11" },
+    { "timestamp": "2024-12-11 15:30:20", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "5.3 KB", "apiKey": "development", "date": "Dec 11" },
+    { "timestamp": "2024-12-11 15:30:15", "endpoint": "/api/v1/auth", "method": "POST", "status": 200, "responseTime": "11ms", "bytes": "768 B", "apiKey": "mobile", "date": "Dec 11" },
+    { "timestamp": "2024-12-11 15:30:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "4.2 KB", "apiKey": "staging", "date": "Dec 11" },
+
+    { "timestamp": "2024-12-10 09:15:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "2.8 KB", "apiKey": "mobile", "date": "Dec 10" },
+    { "timestamp": "2024-12-10 09:15:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "25ms", "bytes": "5.2 KB", "apiKey": "mobile", "date": "Dec 10" },
+    { "timestamp": "2024-12-10 09:15:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "12ms", "bytes": "256 B", "apiKey": "production", "date": "Dec 10" },
+    { "timestamp": "2024-12-10 09:15:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "95ms", "bytes": "7.3 KB", "apiKey": "mobile", "date": "Dec 10" },
+    { "timestamp": "2024-12-10 09:15:00", "endpoint": "/api/v1/auth", "method": "POST", "status": 401, "responseTime": "8ms", "bytes": "128 B", "apiKey": "mobile", "date": "Dec 10" },
+    { "timestamp": "2024-12-10 09:14:55", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.0 KB", "apiKey": "production", "date": "Dec 10" },
+
+    { "timestamp": "2024-12-09 14:22:18", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "2.9 KB", "apiKey": "staging", "date": "Dec 9" },
+    { "timestamp": "2024-12-09 14:22:12", "endpoint": "/api/v1/products", "method": "POST", "status": 500, "responseTime": "110ms", "bytes": "512 B", "apiKey": "staging", "date": "Dec 9" },
+    { "timestamp": "2024-12-09 14:22:05", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.4 KB", "apiKey": "development", "date": "Dec 9" },
+    { "timestamp": "2024-12-09 14:22:00", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "88ms", "bytes": "6.8 KB", "apiKey": "staging", "date": "Dec 9" },
+
+    { "timestamp": "2024-12-08 11:30:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.2 KB", "apiKey": "production", "date": "Dec 8" },
+    { "timestamp": "2024-12-08 11:30:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "4.8 KB", "apiKey": "production", "date": "Dec 8" },
+    { "timestamp": "2024-12-08 11:30:35", "endpoint": "/api/v1/orders", "method": "POST", "status": 201, "responseTime": "51ms", "bytes": "1.3 KB", "apiKey": "mobile", "date": "Dec 8" },
+    { "timestamp": "2024-12-08 11:30:30", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "145ms", "bytes": "9.5 KB", "apiKey": "production", "date": "Dec 8" },
+
+    { "timestamp": "2024-12-07 16:45:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "3.3 KB", "apiKey": "mobile", "date": "Dec 7" },
+    { "timestamp": "2024-12-07 16:45:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "26ms", "bytes": "5.1 KB", "apiKey": "mobile", "date": "Dec 7" },
+    { "timestamp": "2024-12-07 16:45:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.9 KB", "apiKey": "production", "date": "Dec 7" },
+
+    { "timestamp": "2024-12-06 10:10:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.8 KB", "apiKey": "production", "date": "Dec 6" },
+    { "timestamp": "2024-12-06 10:10:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.4 KB", "apiKey": "development", "date": "Dec 6" },
+    { "timestamp": "2024-12-06 10:10:20", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "24ms", "bytes": "512 B", "apiKey": "production", "date": "Dec 6" },
+
+    { "timestamp": "2024-12-05 14:30:25", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.2 KB", "apiKey": "mobile", "date": "Dec 5" },
+    { "timestamp": "2024-12-05 14:30:20", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "27ms", "bytes": "5.4 KB", "apiKey": "mobile", "date": "Dec 5" },
+
+    { "timestamp": "2024-12-04 12:15:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "2.9 KB", "apiKey": "production", "date": "Dec 4" },
+    { "timestamp": "2024-12-04 12:15:25", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "48ms", "bytes": "1.3 KB", "apiKey": "development", "date": "Dec 4" },
+    { "timestamp": "2024-12-04 12:15:20", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "4.1 KB", "apiKey": "mobile", "date": "Dec 4" },
+    { "timestamp": "2024-12-04 12:15:15", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "132ms", "bytes": "512 B", "apiKey": "production", "date": "Dec 4" },
+
+    { "timestamp": "2024-12-03 09:30:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "3.0 KB", "apiKey": "staging", "date": "Dec 3" },
+    { "timestamp": "2024-12-03 09:30:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "4.7 KB", "apiKey": "production", "date": "Dec 3" },
+    { "timestamp": "2024-12-03 09:30:35", "endpoint": "/api/v1/orders", "method": "POST", "status": 400, "responseTime": "35ms", "bytes": "384 B", "apiKey": "development", "date": "Dec 3" },
+
+    { "timestamp": "2024-12-02 14:20:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "2.7 KB", "apiKey": "mobile", "date": "Dec 2" },
+    { "timestamp": "2024-12-02 14:20:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "5.0 KB", "apiKey": "production", "date": "Dec 2" },
+    { "timestamp": "2024-12-02 14:20:20", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "20ms", "bytes": "3.8 KB", "apiKey": "mobile", "date": "Dec 2" },
+
+    { "timestamp": "2024-12-01 11:45:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "3.1 KB", "apiKey": "production", "date": "Dec 1" },
+    { "timestamp": "2024-12-01 11:45:10", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "49ms", "bytes": "1.4 KB", "apiKey": "development", "date": "Dec 1" },
+    { "timestamp": "2024-12-01 11:45:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "118ms", "bytes": "8.2 KB", "apiKey": "production", "date": "Dec 1" },
+
+    { "timestamp": "2024-11-30 16:30:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "2.9 KB", "apiKey": "staging", "date": "Nov 30" },
+    { "timestamp": "2024-11-30 16:30:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "4.6 KB", "apiKey": "mobile", "date": "Nov 30" },
+    { "timestamp": "2024-11-30 16:30:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "13ms", "bytes": "256 B", "apiKey": "production", "date": "Nov 30" },
+    { "timestamp": "2024-11-30 16:30:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "95ms", "bytes": "7.5 KB", "apiKey": "development", "date": "Nov 30" },
+
+    { "timestamp": "2024-11-29 10:15:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.2 KB", "apiKey": "production", "date": "Nov 29" },
+    { "timestamp": "2024-11-29 10:15:40", "endpoint": "/api/v1/products", "method": "POST", "status": 500, "responseTime": "125ms", "bytes": "512 B", "apiKey": "staging", "date": "Nov 29" },
+    { "timestamp": "2024-11-29 10:15:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.0 KB", "apiKey": "mobile", "date": "Nov 29" },
+
+    { "timestamp": "2024-11-28 13:40:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.8 KB", "apiKey": "development", "date": "Nov 28" },
+    { "timestamp": "2024-11-28 13:40:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "20ms", "bytes": "4.9 KB", "apiKey": "production", "date": "Nov 28" },
+    { "timestamp": "2024-11-28 13:40:20", "endpoint": "/api/v1/auth", "method": "POST", "status": 401, "responseTime": "9ms", "bytes": "128 B", "apiKey": "mobile", "date": "Nov 28" },
+
+    { "timestamp": "2024-11-27 15:20:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.0 KB", "apiKey": "mobile", "date": "Nov 27" },
+    { "timestamp": "2024-11-27 15:20:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "25ms", "bytes": "5.3 KB", "apiKey": "production", "date": "Nov 27" },
+    { "timestamp": "2024-11-27 15:20:05", "endpoint": "/api/v1/orders", "method": "POST", "status": 201, "responseTime": "53ms", "bytes": "1.2 KB", "apiKey": "development", "date": "Nov 27" },
+
+    { "timestamp": "2024-11-26 09:50:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "2.7 KB", "apiKey": "staging", "date": "Nov 26" },
+    { "timestamp": "2024-11-26 09:50:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "4.5 KB", "apiKey": "mobile", "date": "Nov 26" },
+    { "timestamp": "2024-11-26 09:50:20", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "140ms", "bytes": "512 B", "apiKey": "production", "date": "Nov 26" },
+
+    { "timestamp": "2024-11-25 14:10:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "3.1 KB", "apiKey": "production", "date": "Nov 25" },
+    { "timestamp": "2024-11-25 14:10:40", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "46ms", "bytes": "1.5 KB", "apiKey": "development", "date": "Nov 25" },
+    { "timestamp": "2024-11-25 14:10:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.9 KB", "apiKey": "mobile", "date": "Nov 25" },
+
+    { "timestamp": "2024-11-24 11:25:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "2.9 KB", "apiKey": "development", "date": "Nov 24" },
+    { "timestamp": "2024-11-24 11:25:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "4.8 KB", "apiKey": "production", "date": "Nov 24" },
+    { "timestamp": "2024-11-24 11:25:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "12ms", "bytes": "256 B", "apiKey": "mobile", "date": "Nov 24" },
+
+    { "timestamp": "2024-11-23 16:45:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "3.0 KB", "apiKey": "staging", "date": "Nov 23" },
+    { "timestamp": "2024-11-23 16:45:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "5.1 KB", "apiKey": "production", "date": "Nov 23" },
+    { "timestamp": "2024-11-23 16:45:20", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "102ms", "bytes": "8.0 KB", "apiKey": "development", "date": "Nov 23" },
+
+    { "timestamp": "2024-11-22 10:30:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "2.8 KB", "apiKey": "mobile", "date": "Nov 22" },
+    { "timestamp": "2024-11-22 10:30:10", "endpoint": "/api/v1/products", "method": "POST", "status": 500, "responseTime": "115ms", "bytes": "512 B", "apiKey": "staging", "date": "Nov 22" },
+    { "timestamp": "2024-11-22 10:30:05", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "20ms", "bytes": "4.2 KB", "apiKey": "production", "date": "Nov 22" },
+
+    { "timestamp": "2024-11-21 13:15:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.1 KB", "apiKey": "development", "date": "Nov 21" },
+    { "timestamp": "2024-11-21 13:15:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "4.6 KB", "apiKey": "production", "date": "Nov 21" },
+    { "timestamp": "2024-11-21 13:15:35", "endpoint": "/api/v1/auth", "method": "POST", "status": 200, "responseTime": "11ms", "bytes": "768 B", "apiKey": "mobile", "date": "Nov 21" },
+
+    { "timestamp": "2024-11-20 15:50:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.9 KB", "apiKey": "staging", "date": "Nov 20" },
+    { "timestamp": "2024-11-20 15:50:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "5.2 KB", "apiKey": "mobile", "date": "Nov 20" },
+    { "timestamp": "2024-11-20 15:50:10", "endpoint": "/api/v1/orders", "method": "POST", "status": 400, "responseTime": "38ms", "bytes": "384 B", "apiKey": "development", "date": "Nov 20" },
+
+    { "timestamp": "2024-11-19 09:40:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.0 KB", "apiKey": "production", "date": "Nov 19" },
+    { "timestamp": "2024-11-19 09:40:25", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "47ms", "bytes": "1.3 KB", "apiKey": "development", "date": "Nov 19" },
+    { "timestamp": "2024-11-19 09:40:20", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "128ms", "bytes": "8.5 KB", "apiKey": "mobile", "date": "Nov 19" },
+
+    { "timestamp": "2024-11-18 12:20:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.7 KB", "apiKey": "mobile", "date": "Nov 18" },
+    { "timestamp": "2024-11-18 12:20:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.9 KB", "apiKey": "production", "date": "Nov 18" },
+    { "timestamp": "2024-11-18 12:20:05", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "13ms", "bytes": "256 B", "apiKey": "staging", "date": "Nov 18" },
+
+    { "timestamp": "2024-11-17 14:55:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.2 KB", "apiKey": "development", "date": "Nov 17" },
+    { "timestamp": "2024-11-17 14:55:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "25ms", "bytes": "5.0 KB", "apiKey": "production", "date": "Nov 17" },
+    { "timestamp": "2024-11-17 14:55:20", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "135ms", "bytes": "512 B", "apiKey": "mobile", "date": "Nov 17" },
+
+    { "timestamp": "2024-11-16 10:10:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.8 KB", "apiKey": "staging", "date": "Nov 16" },
+    { "timestamp": "2024-11-16 10:10:40", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "50ms", "bytes": "1.4 KB", "apiKey": "development", "date": "Nov 16" },
+    { "timestamp": "2024-11-16 10:10:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "4.1 KB", "apiKey": "production", "date": "Nov 16" },
+
+    { "timestamp": "2024-11-15 13:35:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.0 KB", "apiKey": "mobile", "date": "Nov 15" },
+    { "timestamp": "2024-11-15 13:35:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "4.7 KB", "apiKey": "production", "date": "Nov 15" },
+    { "timestamp": "2024-11-15 13:35:10", "endpoint": "/api/v1/auth", "method": "POST", "status": 401, "responseTime": "10ms", "bytes": "128 B", "apiKey": "mobile", "date": "Nov 15" },
+
+    { "timestamp": "2024-11-14 16:20:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "2.9 KB", "apiKey": "development", "date": "Nov 14" },
+    { "timestamp": "2024-11-14 16:20:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "5.1 KB", "apiKey": "staging", "date": "Nov 14" },
+    { "timestamp": "2024-11-14 16:20:20", "endpoint": "/api/v1/orders", "method": "POST", "status": 500, "responseTime": "122ms", "bytes": "512 B", "apiKey": "production", "date": "Nov 14" },
+
+    { "timestamp": "2024-11-13 11:45:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "3.1 KB", "apiKey": "production", "date": "Nov 13" },
+    { "timestamp": "2024-11-13 11:45:10", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "48ms", "bytes": "1.5 KB", "apiKey": "development", "date": "Nov 13" },
+    { "timestamp": "2024-11-13 11:45:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "110ms", "bytes": "7.8 KB", "apiKey": "mobile", "date": "Nov 13" },
+
+    { "timestamp": "2024-11-12 14:30:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "2.7 KB", "apiKey": "mobile", "date": "Nov 12" },
+    { "timestamp": "2024-11-12 14:30:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "4.8 KB", "apiKey": "production", "date": "Nov 12" },
+    { "timestamp": "2024-11-12 14:30:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "12ms", "bytes": "256 B", "apiKey": "staging", "date": "Nov 12" },
+
+    { "timestamp": "2024-11-11 09:15:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "3.0 KB", "apiKey": "development", "date": "Nov 11" },
+    { "timestamp": "2024-11-11 09:15:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "5.2 KB", "apiKey": "production", "date": "Nov 11" },
+    { "timestamp": "2024-11-11 09:15:10", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "98ms", "bytes": "8.3 KB", "apiKey": "mobile", "date": "Nov 11" },
+
+    { "timestamp": "2024-11-10 12:50:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "2.8 KB", "apiKey": "staging", "date": "Nov 10" },
+    { "timestamp": "2024-11-10 12:50:25", "endpoint": "/api/v1/products", "method": "POST", "status": 500, "responseTime": "130ms", "bytes": "512 B", "apiKey": "production", "date": "Nov 10" },
+    { "timestamp": "2024-11-10 12:50:20", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "20ms", "bytes": "4.0 KB", "apiKey": "development", "date": "Nov 10" },
+
+    { "timestamp": "2024-11-09 15:40:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.1 KB", "apiKey": "mobile", "date": "Nov 9" },
+    { "timestamp": "2024-11-09 15:40:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "4.9 KB", "apiKey": "production", "date": "Nov 9" },
+    { "timestamp": "2024-11-09 15:40:05", "endpoint": "/api/v1/auth", "method": "POST", "status": 200, "responseTime": "12ms", "bytes": "896 B", "apiKey": "development", "date": "Nov 9" },
+
+    { "timestamp": "2024-11-08 10:25:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.9 KB", "apiKey": "production", "date": "Nov 8" },
+    { "timestamp": "2024-11-08 10:25:40", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "49ms", "bytes": "1.3 KB", "apiKey": "development", "date": "Nov 8" },
+    { "timestamp": "2024-11-08 10:25:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.9 KB", "apiKey": "mobile", "date": "Nov 8" },
+
+    { "timestamp": "2024-11-07 13:10:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.0 KB", "apiKey": "staging", "date": "Nov 7" },
+    { "timestamp": "2024-11-07 13:10:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "25ms", "bytes": "5.3 KB", "apiKey": "production", "date": "Nov 7" },
+    { "timestamp": "2024-11-07 13:10:10", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "145ms", "bytes": "512 B", "apiKey": "mobile", "date": "Nov 7" },
+
+    { "timestamp": "2024-11-06 16:55:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.7 KB", "apiKey": "development", "date": "Nov 6" },
+    { "timestamp": "2024-11-06 16:55:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "4.6 KB", "apiKey": "production", "date": "Nov 6" },
+    { "timestamp": "2024-11-06 16:55:20", "endpoint": "/api/v1/orders", "method": "POST", "status": 400, "responseTime": "36ms", "bytes": "384 B", "apiKey": "mobile", "date": "Nov 6" },
+
+    { "timestamp": "2024-11-05 11:40:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.1 KB", "apiKey": "mobile", "date": "Nov 5" },
+    { "timestamp": "2024-11-05 11:40:10", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "51ms", "bytes": "1.4 KB", "apiKey": "staging", "date": "Nov 5" },
+    { "timestamp": "2024-11-05 11:40:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "105ms", "bytes": "8.1 KB", "apiKey": "production", "date": "Nov 5" },
+
+    { "timestamp": "2024-11-04 14:25:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "2.8 KB", "apiKey": "development", "date": "Nov 4" },
+    { "timestamp": "2024-11-04 14:25:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "5.0 KB", "apiKey": "production", "date": "Nov 4" },
+    { "timestamp": "2024-11-04 14:25:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "14ms", "bytes": "256 B", "apiKey": "mobile", "date": "Nov 4" },
+
+    { "timestamp": "2024-11-03 09:10:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.9 KB", "apiKey": "staging", "date": "Nov 3" },
+    { "timestamp": "2024-11-03 09:10:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.7 KB", "apiKey": "production", "date": "Nov 3" },
+    { "timestamp": "2024-11-03 09:10:10", "endpoint": "/api/v1/auth", "method": "POST", "status": 500, "responseTime": "118ms", "bytes": "512 B", "apiKey": "development", "date": "Nov 3" },
+
+    { "timestamp": "2024-11-02 12:55:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.0 KB", "apiKey": "mobile", "date": "Nov 2" },
+    { "timestamp": "2024-11-02 12:55:25", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "47ms", "bytes": "1.2 KB", "apiKey": "development", "date": "Nov 2" },
+    { "timestamp": "2024-11-02 12:55:20", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "112ms", "bytes": "7.9 KB", "apiKey": "production", "date": "Nov 2" },
+
+    { "timestamp": "2024-11-01 15:40:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.7 KB", "apiKey": "production", "date": "Nov 1" },
+    { "timestamp": "2024-11-01 15:40:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "4.8 KB", "apiKey": "staging", "date": "Nov 1" },
+    { "timestamp": "2024-11-01 15:40:05", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "4.1 KB", "apiKey": "mobile", "date": "Nov 1" },
+
+    { "timestamp": "2024-10-31 10:25:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.1 KB", "apiKey": "development", "date": "Oct 31" },
+    { "timestamp": "2024-10-31 10:25:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "5.2 KB", "apiKey": "production", "date": "Oct 31" },
+    { "timestamp": "2024-10-31 10:25:35", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "138ms", "bytes": "512 B", "apiKey": "mobile", "date": "Oct 31" },
+
+    { "timestamp": "2024-10-30 13:10:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "2.9 KB", "apiKey": "staging", "date": "Oct 30" },
+    { "timestamp": "2024-10-30 13:10:15", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "50ms", "bytes": "1.3 KB", "apiKey": "development", "date": "Oct 30" },
+    { "timestamp": "2024-10-30 13:10:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "20ms", "bytes": "3.8 KB", "apiKey": "production", "date": "Oct 30" },
+
+    { "timestamp": "2024-10-29 16:55:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "3.0 KB", "apiKey": "mobile", "date": "Oct 29" },
+    { "timestamp": "2024-10-29 16:55:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "4.9 KB", "apiKey": "production", "date": "Oct 29" },
+    { "timestamp": "2024-10-29 16:55:20", "endpoint": "/api/v1/auth", "method": "POST", "status": 401, "responseTime": "11ms", "bytes": "128 B", "apiKey": "mobile", "date": "Oct 29" },
+
+    { "timestamp": "2024-10-28 11:40:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "2.8 KB", "apiKey": "development", "date": "Oct 28" },
+    { "timestamp": "2024-10-28 11:40:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "25ms", "bytes": "5.1 KB", "apiKey": "staging", "date": "Oct 28" },
+    { "timestamp": "2024-10-28 11:40:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "102ms", "bytes": "8.2 KB", "apiKey": "production", "date": "Oct 28" },
+
+    { "timestamp": "2024-10-27 14:25:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "3.1 KB", "apiKey": "mobile", "date": "Oct 27" },
+    { "timestamp": "2024-10-27 14:25:40", "endpoint": "/api/v1/products", "method": "POST", "status": 500, "responseTime": "125ms", "bytes": "512 B", "apiKey": "production", "date": "Oct 27" },
+    { "timestamp": "2024-10-27 14:25:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "4.0 KB", "apiKey": "development", "date": "Oct 27" },
+
+    { "timestamp": "2024-10-26 09:10:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "2.7 KB", "apiKey": "staging", "date": "Oct 26" },
+    { "timestamp": "2024-10-26 09:10:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "4.6 KB", "apiKey": "production", "date": "Oct 26" },
+    { "timestamp": "2024-10-26 09:10:10", "endpoint": "/api/v1/orders", "method": "POST", "status": 400, "responseTime": "35ms", "bytes": "384 B", "apiKey": "mobile", "date": "Oct 26" },
+
+    { "timestamp": "2024-10-25 12:55:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.0 KB", "apiKey": "development", "date": "Oct 25" },
+    { "timestamp": "2024-10-25 12:55:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "5.3 KB", "apiKey": "production", "date": "Oct 25" },
+    { "timestamp": "2024-10-25 12:55:20", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "115ms", "bytes": "7.7 KB", "apiKey": "mobile", "date": "Oct 25" },
+
+    { "timestamp": "2024-10-24 15:40:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.9 KB", "apiKey": "mobile", "date": "Oct 24" },
+    { "timestamp": "2024-10-24 15:40:10", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "48ms", "bytes": "1.4 KB", "apiKey": "staging", "date": "Oct 24" },
+    { "timestamp": "2024-10-24 15:40:05", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "3.9 KB", "apiKey": "production", "date": "Oct 24" },
+
+    { "timestamp": "2024-10-23 10:25:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.1 KB", "apiKey": "development", "date": "Oct 23" },
+    { "timestamp": "2024-10-23 10:25:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "4.8 KB", "apiKey": "production", "date": "Oct 23" },
+    { "timestamp": "2024-10-23 10:25:35", "endpoint": "/api/v1/auth", "method": "POST", "status": 500, "responseTime": "132ms", "bytes": "512 B", "apiKey": "mobile", "date": "Oct 23" },
+
+    { "timestamp": "2024-10-22 13:10:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.8 KB", "apiKey": "staging", "date": "Oct 22" },
+    { "timestamp": "2024-10-22 13:10:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "5.0 KB", "apiKey": "production", "date": "Oct 22" },
+    { "timestamp": "2024-10-22 13:10:10", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "108ms", "bytes": "8.4 KB", "apiKey": "development", "date": "Oct 22" },
+
+    { "timestamp": "2024-10-21 16:55:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "2.9 KB", "apiKey": "mobile", "date": "Oct 21" },
+    { "timestamp": "2024-10-21 16:55:25", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "49ms", "bytes": "1.5 KB", "apiKey": "development", "date": "Oct 21" },
+    { "timestamp": "2024-10-21 16:55:20", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "13ms", "bytes": "256 B", "apiKey": "production", "date": "Oct 21" },
+
+    { "timestamp": "2024-10-20 11:40:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.0 KB", "apiKey": "production", "date": "Oct 20" },
+    { "timestamp": "2024-10-20 11:40:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "4.7 KB", "apiKey": "staging", "date": "Oct 20" },
+    { "timestamp": "2024-10-20 11:40:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "142ms", "bytes": "512 B", "apiKey": "mobile", "date": "Oct 20" },
+
+    { "timestamp": "2024-10-19 14:25:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.7 KB", "apiKey": "development", "date": "Oct 19" },
+    { "timestamp": "2024-10-19 14:25:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "5.1 KB", "apiKey": "production", "date": "Oct 19" },
+    { "timestamp": "2024-10-19 14:25:35", "endpoint": "/api/v1/orders", "method": "POST", "status": 400, "responseTime": "37ms", "bytes": "384 B", "apiKey": "mobile", "date": "Oct 19" },
+
+    { "timestamp": "2024-10-18 09:10:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.1 KB", "apiKey": "staging", "date": "Oct 18" },
+    { "timestamp": "2024-10-18 09:10:15", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "51ms", "bytes": "1.3 KB", "apiKey": "development", "date": "Oct 18" },
+    { "timestamp": "2024-10-18 09:10:10", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "119ms", "bytes": "8.0 KB", "apiKey": "production", "date": "Oct 18" },
+
+    { "timestamp": "2024-10-17 12:55:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.8 KB", "apiKey": "mobile", "date": "Oct 17" },
+    { "timestamp": "2024-10-17 12:55:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "4.9 KB", "apiKey": "production", "date": "Oct 17" },
+    { "timestamp": "2024-10-17 12:55:20", "endpoint": "/api/v1/auth", "method": "POST", "status": 200, "responseTime": "12ms", "bytes": "896 B", "apiKey": "development", "date": "Oct 17" },
+
+    { "timestamp": "2024-10-16 15:40:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "2.9 KB", "apiKey": "development", "date": "Oct 16" },
+    { "timestamp": "2024-10-16 15:40:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "5.2 KB", "apiKey": "staging", "date": "Oct 16" },
+    { "timestamp": "2024-10-16 15:40:05", "endpoint": "/api/v1/orders", "method": "GET", "status": 500, "responseTime": "128ms", "bytes": "512 B", "apiKey": "mobile", "date": "Oct 16" },
+
+    { "timestamp": "2024-10-15 10:25:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.0 KB", "apiKey": "production", "date": "Oct 15" },
+    { "timestamp": "2024-10-15 10:25:40", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "47ms", "bytes": "1.4 KB", "apiKey": "development", "date": "Oct 15" },
+    { "timestamp": "2024-10-15 10:25:35", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "105ms", "bytes": "7.6 KB", "apiKey": "mobile", "date": "Oct 15" },
+
+    { "timestamp": "2024-10-14 13:10:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.7 KB", "apiKey": "staging", "date": "Oct 14" },
+    { "timestamp": "2024-10-14 13:10:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.6 KB", "apiKey": "production", "date": "Oct 14" },
+    { "timestamp": "2024-10-14 13:10:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "15ms", "bytes": "256 B", "apiKey": "mobile", "date": "Oct 14" },
+
+    { "timestamp": "2024-09-30 16:45:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "3.1 KB", "apiKey": "production", "date": "Sep 30" },
+    { "timestamp": "2024-09-30 16:45:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "25ms", "bytes": "5.3 KB", "apiKey": "development", "date": "Sep 30" },
+    { "timestamp": "2024-09-30 16:45:20", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "145ms", "bytes": "512 B", "apiKey": "mobile", "date": "Sep 30" },
+
+    { "timestamp": "2024-09-29 11:30:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "2.9 KB", "apiKey": "staging", "date": "Sep 29" },
+    { "timestamp": "2024-09-29 11:30:10", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "52ms", "bytes": "1.5 KB", "apiKey": "development", "date": "Sep 29" },
+    { "timestamp": "2024-09-29 11:30:05", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.2 KB", "apiKey": "production", "date": "Sep 29" },
+
+    { "timestamp": "2024-09-28 14:15:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "3.0 KB", "apiKey": "mobile", "date": "Sep 28" },
+    { "timestamp": "2024-09-28 14:15:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "4.8 KB", "apiKey": "production", "date": "Sep 28" },
+    { "timestamp": "2024-09-28 14:15:35", "endpoint": "/api/v1/auth", "method": "POST", "status": 401, "responseTime": "10ms", "bytes": "128 B", "apiKey": "mobile", "date": "Sep 28" },
+
+    { "timestamp": "2024-09-27 09:50:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "2.8 KB", "apiKey": "development", "date": "Sep 27" },
+    { "timestamp": "2024-09-27 09:50:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "5.1 KB", "apiKey": "staging", "date": "Sep 27" },
+    { "timestamp": "2024-09-27 09:50:10", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "112ms", "bytes": "8.3 KB", "apiKey": "production", "date": "Sep 27" },
+
+    { "timestamp": "2024-09-26 12:35:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "3.1 KB", "apiKey": "mobile", "date": "Sep 26" },
+    { "timestamp": "2024-09-26 12:35:25", "endpoint": "/api/v1/products", "method": "POST", "status": 500, "responseTime": "138ms", "bytes": "512 B", "apiKey": "production", "date": "Sep 26" },
+    { "timestamp": "2024-09-26 12:35:20", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "20ms", "bytes": "3.9 KB", "apiKey": "development", "date": "Sep 26" },
+
+    { "timestamp": "2024-09-25 15:20:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.7 KB", "apiKey": "staging", "date": "Sep 25" },
+    { "timestamp": "2024-09-25 15:20:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.7 KB", "apiKey": "production", "date": "Sep 25" },
+    { "timestamp": "2024-09-25 15:20:05", "endpoint": "/api/v1/orders", "method": "POST", "status": 400, "responseTime": "36ms", "bytes": "384 B", "apiKey": "mobile", "date": "Sep 25" },
+
+    { "timestamp": "2024-09-24 10:05:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.0 KB", "apiKey": "development", "date": "Sep 24" },
+    { "timestamp": "2024-09-24 10:05:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "5.2 KB", "apiKey": "production", "date": "Sep 24" },
+    { "timestamp": "2024-09-24 10:05:35", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "120ms", "bytes": "7.8 KB", "apiKey": "mobile", "date": "Sep 24" },
+
+    { "timestamp": "2024-09-23 13:50:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.9 KB", "apiKey": "mobile", "date": "Sep 23" },
+    { "timestamp": "2024-09-23 13:50:15", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "50ms", "bytes": "1.3 KB", "apiKey": "staging", "date": "Sep 23" },
+    { "timestamp": "2024-09-23 13:50:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 200, "responseTime": "19ms", "bytes": "4.0 KB", "apiKey": "production", "date": "Sep 23" },
+
+    { "timestamp": "2024-09-22 16:35:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.1 KB", "apiKey": "production", "date": "Sep 22" },
+    { "timestamp": "2024-09-22 16:35:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "23ms", "bytes": "4.9 KB", "apiKey": "development", "date": "Sep 22" },
+    { "timestamp": "2024-09-22 16:35:20", "endpoint": "/api/v1/auth", "method": "POST", "status": 500, "responseTime": "135ms", "bytes": "512 B", "apiKey": "mobile", "date": "Sep 22" },
+
+    { "timestamp": "2024-09-21 11:20:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "2.8 KB", "apiKey": "staging", "date": "Sep 21" },
+    { "timestamp": "2024-09-21 11:20:10", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "5.0 KB", "apiKey": "production", "date": "Sep 21" },
+    { "timestamp": "2024-09-21 11:20:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "108ms", "bytes": "8.1 KB", "apiKey": "development", "date": "Sep 21" },
+
+    { "timestamp": "2024-09-20 14:05:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.9 KB", "apiKey": "mobile", "date": "Sep 20" },
+    { "timestamp": "2024-09-20 14:05:40", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "48ms", "bytes": "1.4 KB", "apiKey": "development", "date": "Sep 20" },
+    { "timestamp": "2024-09-20 14:05:35", "endpoint": "/api/v1/orders", "method": "GET", "status": 404, "responseTime": "13ms", "bytes": "256 B", "apiKey": "production", "date": "Sep 20" },
+
+    { "timestamp": "2024-09-19 09:50:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "17ms", "bytes": "3.0 KB", "apiKey": "production", "date": "Sep 19" },
+    { "timestamp": "2024-09-19 09:50:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "25ms", "bytes": "5.3 KB", "apiKey": "staging", "date": "Sep 19" },
+    { "timestamp": "2024-09-19 09:50:10", "endpoint": "/api/v1/analytics", "method": "GET", "status": 500, "responseTime": "142ms", "bytes": "512 B", "apiKey": "mobile", "date": "Sep 19" },
+
+    { "timestamp": "2024-09-18 12:35:30", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "15ms", "bytes": "2.7 KB", "apiKey": "development", "date": "Sep 18" },
+    { "timestamp": "2024-09-18 12:35:25", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "21ms", "bytes": "4.6 KB", "apiKey": "production", "date": "Sep 18" },
+    { "timestamp": "2024-09-18 12:35:20", "endpoint": "/api/v1/orders", "method": "POST", "status": 400, "responseTime": "37ms", "bytes": "384 B", "apiKey": "mobile", "date": "Sep 18" },
+
+    { "timestamp": "2024-09-17 15:20:15", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "16ms", "bytes": "3.1 KB", "apiKey": "mobile", "date": "Sep 17" },
+    { "timestamp": "2024-09-17 15:20:10", "endpoint": "/api/v1/products", "method": "POST", "status": 201, "responseTime": "51ms", "bytes": "1.5 KB", "apiKey": "staging", "date": "Sep 17" },
+    { "timestamp": "2024-09-17 15:20:05", "endpoint": "/api/v1/analytics", "method": "GET", "status": 200, "responseTime": "115ms", "bytes": "7.9 KB", "apiKey": "production", "date": "Sep 17" },
+
+    { "timestamp": "2024-09-16 10:05:45", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "18ms", "bytes": "2.8 KB", "apiKey": "development", "date": "Sep 16" },
+    { "timestamp": "2024-09-16 10:05:40", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "24ms", "bytes": "4.9 KB", "apiKey": "production", "date": "Sep 16" },
+    { "timestamp": "2024-09-16 10:05:35", "endpoint": "/api/v1/auth", "method": "POST", "status": 200, "responseTime": "11ms", "bytes": "896 B", "apiKey": "mobile", "date": "Sep 16" },
+
+    { "timestamp": "2024-09-15 13:50:20", "endpoint": "/api/v1/users", "method": "GET", "status": 200, "responseTime": "14ms", "bytes": "2.9 KB", "apiKey": "staging", "date": "Sep 15" },
+    { "timestamp": "2024-09-15 13:50:15", "endpoint": "/api/v1/products", "method": "GET", "status": 200, "responseTime": "22ms", "bytes": "5.1 KB", "apiKey": "production", "date": "Sep 15" },
+    { "timestamp": "2024-09-15 13:50:10", "endpoint": "/api/v1/orders", "method": "GET", "status": 500, "responseTime": "130ms", "bytes": "512 B", "apiKey": "development", "date": "Sep 15" }
+  ]
+}

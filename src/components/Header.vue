@@ -84,8 +84,8 @@ header {
     .notification-btn {
       .badge {
         position: absolute;
-        top: -4px;
-        right: -4px;
+        top: -3px;
+        right: -3px;
         background: var(--primary-color);
         color: white;
         font-size: 12px;
