@@ -1,6 +1,19 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuth } from '../composables/useAuth'
+import { useTheme } from '../composables/useTheme'
+import { Line } from 'vue-chartjs'
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+} from 'chart.js'
 
 import Key from '../assets/icons/key.svg?component'
 import Book from '../assets/icons/book.svg?component'
@@ -8,12 +21,113 @@ import CreditCard from '../assets/icons/credit-card.svg?component'
 import TrendingUp from '../assets/icons/tending-up.svg?component'
 
 const { logout } = useAuth()
+const { theme } = useTheme()
 const router = useRouter()
+
+ChartJS.register(
+  Title,
+  Tooltip,
+  Legend,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement
+)
 
 const handleLogout = () => {
   logout()
   router.push('/signin')
 }
+
+// Get CSS variables
+const getThemeColor = (variable: string) => {
+  return getComputedStyle(document.documentElement).getPropertyValue(variable).trim()
+}
+
+// Chart data - reactive to theme changes
+const chartData = computed(() => ({
+  labels: ['Dec 6', 'Dec 7', 'Dec 8', 'Dec 9', 'Dec 10', 'Dec 11', 'Dec 12'],
+  datasets: [
+    {
+      data: [12000, 15000, 14000, 19000, 17000, 21000, 20000],
+      borderColor: getThemeColor('--primary-color'),
+      backgroundColor: getThemeColor('--primary-color'),
+      tension: 0.4,
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      pointBackgroundColor: getThemeColor('--primary-color'),
+      pointBorderColor: getThemeColor('--bg-primary'),
+      pointBorderWidth: 2,
+      pointHoverBackgroundColor: getThemeColor('--primary-color'),
+      pointHoverBorderColor: getThemeColor('--bg-primary'),
+      pointHoverBorderWidth: 2,
+    },
+  ],
+  // Track theme changes
+  _theme: theme.value,
+}))
+
+// Chart options - reactive to theme changes
+const chartOptions = computed(() => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      display: false,
+    },
+    tooltip: {
+      backgroundColor: getThemeColor('--bg-primary'),
+      titleColor: getThemeColor('--text-primary'),
+      bodyColor: getThemeColor('--text-secondary'),
+      borderColor: getThemeColor('--border-color'),
+      borderWidth: 1,
+      padding: 12,
+      displayColors: false,
+      callbacks: {
+        label: function (context: any) {
+          return context.parsed.y.toLocaleString() + ' requests'
+        },
+      },
+    },
+  },
+  scales: {
+    y: {
+      beginAtZero: true,
+      max: 22000,
+      ticks: {
+        stepSize: 5500,
+        color: getThemeColor('--text-tertiary'),
+        font: {
+          size: 12,
+        },
+      },
+      grid: {
+        color: getThemeColor('--border-color'),
+        drawBorder: false,
+      },
+      border: {
+        display: false,
+      },
+    },
+    x: {
+      ticks: {
+        color: getThemeColor('--text-tertiary'),
+        font: {
+          size: 12,
+        },
+      },
+      grid: {
+        display: false,
+        drawBorder: false,
+      },
+      border: {
+        display: false,
+      },
+    },
+  },
+  // Track theme changes
+  _theme: theme.value,
+}))
 </script>
 
 <template>
@@ -57,6 +171,13 @@ const handleLogout = () => {
         <span class="card-title">Active API Keys</span>
         <p class="total">5</p>
         <p class="desc">2 restricted, 3 unrestricted</p>
+      </div>
+    </div>
+    <div class="usage-chart">
+      <h2>Usage Chart</h2>
+      <p class="subtitle">API requests over the last 7 days</p>
+      <div class="chart-container">
+        <Line id="line-usage-chart" :options="chartOptions" :data="chartData" />
       </div>
     </div>
   </div>
@@ -234,6 +355,33 @@ const handleLogout = () => {
           }
         }
       }
+    }
+  }
+
+  .usage-chart {
+    margin-top: 24px;
+    background: var(--bg-primary);
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      margin-bottom: 24px;
+    }
+
+    .chart-container {
+      width: 100%;
+      height: 300px;
     }
   }
 }
