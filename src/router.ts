@@ -10,6 +10,30 @@ const routes: RouteRecordRaw[] = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/api-keys',
+    name: 'API Keys',
+    component: () => import('./pages/APIKeys.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/usage-analytics',
+    name: 'Usage / Analytics',
+    component: () => import('./pages/UsageAndAnalytics.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/billing',
+    name: 'Billing',
+    component: () => import('./pages/Billing.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/support',
+    name: 'Support',
+    component: () => import('./pages/Support.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     path: '/signin',
     name: 'SignIn',
     component: () => import('./pages/auth/SignIn.vue'),

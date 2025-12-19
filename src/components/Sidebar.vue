@@ -12,7 +12,7 @@ const route = useRoute()
 const pages = [
   { name: 'Dashboard', icon: Template, route: '/' },
   { name: 'API Keys', icon: Key, route: '/api-keys' },
-  { name: 'Usage / Analytics', icon: BarChart, route: '/analytics' },
+  { name: 'Usage / Analytics', icon: BarChart, route: '/usage-analytics' },
   { name: 'Billing', icon: CreaditCard, route: '/billing' },
   { name: 'Support', icon: Question, route: '/support' },
 ]

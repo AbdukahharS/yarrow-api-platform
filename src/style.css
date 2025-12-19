@@ -20,6 +20,7 @@
   --input-focus: #717182;
   --error-bg: #fef2f2;
   --error-color: #ef4444;
+  --success-color: #00a63e;
   --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.2);
 
@@ -47,6 +48,7 @@
   --input-focus: #a1a1aa;
   --error-bg: #2a1a1a;
   --error-color: #f87171;
+  --success-color: #22c55e;
   --shadow-sm: 0 4px 6px -1px rgb(255 255 255 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(255 255 255 / 0.15);
 }
