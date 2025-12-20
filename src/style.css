@@ -40,27 +40,37 @@
 }
 
 :root.dark {
-  /* Dark mode colors */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --bg-tertiary: #141414;
-  --text-primary: #f3f3f5;
-  --text-secondary: #a1a1aa;
-  --text-tertiary: #8b8b95;
-  --border-color: #2a2a2a;
-  --input-bg: #1a1a1a;
-  --input-border: #2a2a2a;
-  --input-focus: #a1a1aa;
-  --error-bg: #2a1a1a;
+  /* Backgrounds */
+  --bg-primary: #121212; /* was #0a0a0a */
+  --bg-secondary: #1e1e1e; /* was #1a1a1a */
+  --bg-tertiary: #181818; /* was #141414 */
+
+  /* Text */
+  --text-primary: #e5e7eb; /* slightly softer white */
+  --text-secondary: #b4b4be;
+  --text-tertiary: #9a9aa3;
+
+  /* Borders */
+  --border-color: #2f2f2f;
+
+  /* Inputs */
+  --input-bg: #1f1f1f;
+  --input-border: #343434;
+  --input-focus: #c7c7d1;
+
+  /* Feedback */
+  --error-bg: #3a1f1f;
   --error-color: #f87171;
   --success-color: #22c55e;
-  --shadow-sm: 0 4px 6px -1px rgb(255 255 255 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(255 255 255 / 0.15);
 
-  /* Scrollbar colors - Dark mode */
-  --scrollbar-track: #1a1a1a;
-  --scrollbar-thumb: #3a3a3a;
-  --scrollbar-thumb-hover: #4a4a4a;
+  /* Shadows (slightly more visible) */
+  --shadow-sm: 0 4px 6px -1px rgb(255 255 255 / 0.12);
+  --shadow-md: 0 6px 10px -2px rgb(255 255 255 / 0.18);
+
+  /* Scrollbar */
+  --scrollbar-track: #1e1e1e;
+  --scrollbar-thumb: #4a4a4a;
+  --scrollbar-thumb-hover: #5a5a5a;
 }
 
 body {

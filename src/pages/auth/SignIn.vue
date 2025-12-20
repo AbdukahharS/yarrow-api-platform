@@ -55,7 +55,12 @@ const handleSubmit = async () => {
 
     if (user) {
       login()
-      localStorage.setItem('authUser', JSON.stringify({ email: user.email, company: user.company }))
+      localStorage.setItem('authUser', JSON.stringify({
+        email: user.email,
+        company: user.company,
+        plan: user.plan || 'Pro',
+        emailBalance: user.emailBalance ?? 2500
+      }))
       toast.success('Welcome back!')
       router.push('/')
     } else {

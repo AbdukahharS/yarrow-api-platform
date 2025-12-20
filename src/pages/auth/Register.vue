@@ -87,7 +87,9 @@ const handleCreateAccount = () => {
     dummyUsers.push({
       email: email.value,
       password: password.value,
-      company: companyName.value
+      company: companyName.value,
+      plan: 'Starter',
+      emailBalance: 1000
     })
     localStorage.setItem('dummyUsers', JSON.stringify(dummyUsers))
 
