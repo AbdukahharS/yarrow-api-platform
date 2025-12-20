@@ -1,3 +1,59 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import CreditCardIcon from '../assets/icons/credit-card.svg?component'
+import DownloadIcon from '../assets/icons/download.svg?component'
+
+interface Invoice {
+  id: string
+  date: string
+  amount: string
+  plan: string
+  status: string
+}
+
+const invoices = ref<Invoice[]>([
+  {
+    id: 'INV-2024-12',
+    date: 'Dec 1, 2024',
+    amount: '$299.00',
+    plan: 'Pro',
+    status: 'paid',
+  },
+  {
+    id: 'INV-2024-11',
+    date: 'Nov 1, 2024',
+    amount: '$299.00',
+    plan: 'Pro',
+    status: 'paid',
+  },
+  {
+    id: 'INV-2024-10',
+    date: 'Oct 1, 2024',
+    amount: '$149.00',
+    plan: 'Starter',
+    status: 'paid',
+  },
+  {
+    id: 'INV-2024-09',
+    date: 'Sep 1, 2024',
+    amount: '$149.00',
+    plan: 'Starter',
+    status: 'paid',
+  },
+  {
+    id: 'INV-2024-08',
+    date: 'Aug 1, 2024',
+    amount: '$149.00',
+    plan: 'Starter',
+    status: 'paid',
+  },
+])
+
+const downloadInvoice = (invoiceId: string) => {
+  console.log('Downloading invoice:', invoiceId)
+}
+</script>
+
 <template>
   <div class="billing">
     <h2 class="page-title">Billing</h2>
@@ -40,7 +96,7 @@
             <div class="bar">
               <div
                 class="bar-progress"
-                :style="{ width: `${5 / 100 * 100}%` }"
+                :style="{ width: `${(5 / 100) * 100}%` }"
               ></div>
             </div>
           </div>
@@ -54,7 +110,9 @@
         <div class="plan-card">
           <div class="plan-header">
             <h4 class="plan-name">Starter</h4>
-            <p class="plan-description">Perfect for small projects and testing</p>
+            <p class="plan-description">
+              Perfect for small projects and testing
+            </p>
           </div>
           <div class="plan-price">
             <span class="amount">$49</span>
@@ -77,7 +135,9 @@
           </div>
           <div class="plan-header">
             <h4 class="plan-name">Pro</h4>
-            <p class="plan-description">For growing businesses and applications</p>
+            <p class="plan-description">
+              For growing businesses and applications
+            </p>
           </div>
           <div class="plan-price">
             <span class="amount">$299</span>
@@ -114,6 +174,54 @@
           <button class="plan-button contact">Contact Sales</button>
         </div>
       </div>
+    </div>
+
+    <div class="payment-method">
+      <h3>Payment Method</h3>
+      <p class="section-desc">Manage your payment information</p>
+      <div class="card-info">
+        <div class="card-icon">
+          <CreditCardIcon />
+        </div>
+        <div class="card-details">
+          <span class="card-number">Visa ending in 4242</span>
+          <span class="card-expiry">Expires 12/2025</span>
+        </div>
+        <button class="update-btn">Update</button>
+      </div>
+    </div>
+
+    <div class="invoice-history">
+      <h3>Invoice History</h3>
+      <p class="section-desc">Download your past invoices</p>
+      <table class="invoices-table">
+        <thead>
+          <tr>
+            <th>Invoice</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Plan</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="invoice in invoices" :key="invoice.id">
+            <td>{{ invoice.id }}</td>
+            <td>{{ invoice.date }}</td>
+            <td>{{ invoice.amount }}</td>
+            <td>{{ invoice.plan }}</td>
+            <td>
+              <span class="status-badge paid">{{ invoice.status }}</span>
+            </td>
+            <td>
+              <button class="download-btn" @click="downloadInvoice(invoice.id)">
+                <DownloadIcon />
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -406,6 +514,169 @@
               opacity: 0.9;
             }
           }
+        }
+      }
+    }
+  }
+
+  .payment-method {
+    margin-top: 24px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 25px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .section-desc {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .card-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+
+      .card-icon {
+        width: 48px;
+        height: 48px;
+        background-color: var(--bg-secondary);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          color: var(--text-secondary);
+        }
+      }
+
+      .card-details {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .card-number {
+          font-weight: 500;
+          font-size: 14px;
+          color: var(--text-primary);
+        }
+
+        .card-expiry {
+          font-size: 13px;
+          color: var(--text-secondary);
+        }
+      }
+
+      .update-btn {
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        padding: 8px 20px;
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--text-primary);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: box-shadow 0.2s ease-in-out;
+
+        &:hover {
+          box-shadow: var(--shadow-sm);
+        }
+      }
+    }
+  }
+
+  .invoice-history {
+    margin-top: 24px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 25px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .section-desc {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .invoices-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        text-align: left;
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--text-primary);
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      td {
+        padding: 16px;
+        font-size: 14px;
+        color: var(--text-secondary);
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: lowercase;
+
+        &.paid {
+          background-color: #22c55e;
+          color: white;
+        }
+      }
+
+      .download-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        transition: background-color 0.2s ease-in-out;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          color: var(--text-secondary);
+        }
+
+        &:hover {
+          background-color: var(--bg-secondary);
         }
       }
     }
