@@ -41,37 +41,38 @@
 
 :root.dark {
   /* Backgrounds */
-  --bg-primary: #121212; /* was #0a0a0a */
-  --bg-secondary: #1e1e1e; /* was #1a1a1a */
-  --bg-tertiary: #181818; /* was #141414 */
+  --bg-primary: #161616;
+  --bg-secondary: #222222;
+  --bg-tertiary: #1c1c1c;
 
   /* Text */
-  --text-primary: #e5e7eb; /* slightly softer white */
-  --text-secondary: #b4b4be;
-  --text-tertiary: #9a9aa3;
+  --text-primary: #e8e9ec;
+  --text-secondary: #c1c1cb;
+  --text-tertiary: #a6a6b0;
 
   /* Borders */
-  --border-color: #2f2f2f;
+  --border-color: #3a3a3a;
 
   /* Inputs */
-  --input-bg: #1f1f1f;
-  --input-border: #343434;
-  --input-focus: #c7c7d1;
+  --input-bg: #242424;
+  --input-border: #3f3f3f;
+  --input-focus: #d1d1db;
 
   /* Feedback */
-  --error-bg: #3a1f1f;
+  --error-bg: #422424;
   --error-color: #f87171;
   --success-color: #22c55e;
 
-  /* Shadows (slightly more visible) */
-  --shadow-sm: 0 4px 6px -1px rgb(255 255 255 / 0.12);
-  --shadow-md: 0 6px 10px -2px rgb(255 255 255 / 0.18);
+  /* Shadows */
+  --shadow-sm: 0 4px 8px -2px rgb(255 255 255 / 0.14);
+  --shadow-md: 0 8px 14px -4px rgb(255 255 255 / 0.2);
 
   /* Scrollbar */
-  --scrollbar-track: #1e1e1e;
-  --scrollbar-thumb: #4a4a4a;
-  --scrollbar-thumb-hover: #5a5a5a;
+  --scrollbar-track: #222222;
+  --scrollbar-thumb: #5a5a5a;
+  --scrollbar-thumb-hover: #6a6a6a;
 }
+
 
 body {
   background-color: var(--bg-primary);
