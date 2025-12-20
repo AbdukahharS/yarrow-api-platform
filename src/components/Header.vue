@@ -3,9 +3,9 @@ import { useRoute } from 'vue-router'
 import { useTheme } from '../composables/useTheme'
 
 import Bell from '../assets/icons/bell.svg?component'
-import User from '../assets/icons/user.svg?component'
 import Moon from '../assets/icons/moon.svg?component'
 import Sun from '../assets/icons/sun.svg?component'
+import UserMenu from './UserMenu.vue'
 
 const { theme, toggleTheme } = useTheme()
 
@@ -21,7 +21,7 @@ const route = useRoute()
         <Bell class="icon" />
         <span class="badge">3</span>
       </button>
-      <button><User class="icon" /></button>
+      <UserMenu />
       <button
         @click="toggleTheme"
         class="theme-toggle"

@@ -435,7 +435,6 @@ const openFileDialog = () => {
 .modal-footer {
   padding: 16px 24px 24px 24px;
   display: flex;
-  justify-content: flex-end;
   gap: 12px;
 }
 
@@ -446,9 +445,10 @@ const openFileDialog = () => {
   font-weight: 500;
   font-size: 14px;
   color: var(--text-primary);
-  border-radius: 24px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  flex: 1;
 
   &:hover {
     background: var(--bg-secondary);
@@ -456,11 +456,12 @@ const openFileDialog = () => {
 }
 
 .submit-btn {
+  flex: 1;
   background-color: var(--primary-color);
   color: #fff;
   border: none;
   padding: 10px 24px;
-  border-radius: 24px;
+  border-radius: 12px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
