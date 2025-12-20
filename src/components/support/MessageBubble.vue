@@ -4,6 +4,16 @@ import type { Message } from '@/types/support'
 defineProps<{
   message: Message
 }>()
+
+const formatFileSize = (bytes: number): string => {
+  if (bytes < 1024) return `${bytes} B`
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
+}
+
+const isImage = (type: string): boolean => {
+  return type.startsWith('image/')
+}
 </script>
 
 <template>
@@ -20,7 +30,32 @@ defineProps<{
       </div>
     </div>
     <div class="message-content">
-      <p>{{ message.content }}</p>
+      <p v-if="message.content">{{ message.content }}</p>
+      <div v-if="message.attachments?.length" class="attachments">
+        <template v-for="attachment in message.attachments" :key="attachment.id">
+          <a
+            v-if="isImage(attachment.type)"
+            :href="attachment.url"
+            target="_blank"
+            class="attachment-image"
+          >
+            <img :src="attachment.url" :alt="attachment.name" />
+          </a>
+          <a
+            v-else
+            :href="attachment.url"
+            :download="attachment.name"
+            class="attachment-file"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span class="attachment-name">{{ attachment.name }}</span>
+            <span class="attachment-size">{{ formatFileSize(attachment.size) }}</span>
+          </a>
+        </template>
+      </div>
     </div>
   </div>
 </template>
@@ -85,6 +120,66 @@ defineProps<{
     line-height: 1.5;
     margin: 0;
   }
+}
+
+.attachments {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.attachment-image {
+  display: block;
+  max-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.attachment-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--bg-secondary);
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: var(--text-secondary);
+  }
+}
+
+.attachment-name {
+  flex: 1;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attachment-size {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
 }
 
 .message.user .message-content {

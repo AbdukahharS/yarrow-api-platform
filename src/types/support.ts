@@ -1,8 +1,17 @@
+export interface Attachment {
+  id: string
+  name: string
+  size: number
+  type: string
+  url: string
+}
+
 export interface Message {
   id: string
   sender: 'user' | 'support'
   content: string
   timestamp: string
+  attachments?: Attachment[]
 }
 
 export type TicketStatus = 'open' | 'closed' | 'in-progress'

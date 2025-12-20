@@ -61,7 +61,8 @@ const getPriorityClass = (priority: string) => {
   padding: 16px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  border: 1px solid transparent;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 
   &:hover {
     background: var(--bg-tertiary);
@@ -69,7 +70,6 @@ const getPriorityClass = (priority: string) => {
 
   &.selected {
     background: var(--bg-secondary);
-    border-color: var(--border-color);
   }
 }
 

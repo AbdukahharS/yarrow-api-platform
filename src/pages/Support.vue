@@ -30,8 +30,8 @@ const handleCreateTicket = (data: NewTicketData) => {
   closeNewTicketModal()
 }
 
-const handleAttach = () => {
-  // TODO: Implement file attachment
+const handleSendMessage = (message: string, files: File[]) => {
+  sendMessage(message, files)
 }
 </script>
 
@@ -57,8 +57,7 @@ const handleAttach = () => {
       <TicketDetail
         v-if="selectedTicket"
         :ticket="selectedTicket"
-        @send-message="sendMessage"
-        @attach="handleAttach"
+        @send-message="handleSendMessage"
       />
     </div>
 

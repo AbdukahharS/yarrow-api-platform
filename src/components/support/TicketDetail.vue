@@ -1,16 +1,35 @@
 <script setup lang="ts">
+import { ref, watch, nextTick } from 'vue'
 import type { Ticket } from '@/types/support'
 import MessageBubble from './MessageBubble.vue'
 import MessageInput from './MessageInput.vue'
 
-defineProps<{
+const props = defineProps<{
   ticket: Ticket
 }>()
 
 defineEmits<{
-  sendMessage: [message: string]
-  attach: []
+  sendMessage: [message: string, files: File[]]
 }>()
+
+const messagesContainer = ref<HTMLElement | null>(null)
+
+const scrollToBottom = () => {
+  nextTick(() => {
+    if (messagesContainer.value) {
+      messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
+    }
+  })
+}
+
+// Scroll to bottom when ticket changes or messages are added
+watch(
+  () => [props.ticket.id, props.ticket.messages.length],
+  () => {
+    scrollToBottom()
+  },
+  { immediate: true }
+)
 
 const getStatusClass = (status: string) => {
   return status.toLowerCase().replace('-', '')
@@ -43,7 +62,7 @@ const getPriorityClass = (priority: string) => {
       </p>
     </div>
 
-    <div class="messages-container">
+    <div ref="messagesContainer" class="messages-container">
       <MessageBubble
         v-for="message in ticket.messages"
         :key="message.id"
@@ -52,8 +71,7 @@ const getPriorityClass = (priority: string) => {
     </div>
 
     <MessageInput
-      @send="$emit('sendMessage', $event)"
-      @attach="$emit('attach')"
+      @send="(msg, files) => $emit('sendMessage', msg, files)"
     />
   </div>
 </template>

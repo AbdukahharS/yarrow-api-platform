@@ -1,5 +1,5 @@
 import { ref, computed } from 'vue'
-import type { Ticket, Message, NewTicketData } from '@/types/support'
+import type { Ticket, Message, NewTicketData, Attachment } from '@/types/support'
 
 const tickets = ref<Ticket[]>([
   {
@@ -172,14 +172,25 @@ export function useTickets() {
     selectedTicketId.value = ticketId
   }
 
-  const sendMessage = (content: string) => {
-    if (!content.trim() || !selectedTicket.value) return
+  const sendMessage = (content: string, files: File[] = []) => {
+    if (!content.trim() && files.length === 0) return
+    if (!selectedTicket.value) return
+
+    // Convert files to attachments (in a real app, you'd upload these to a server)
+    const attachments: Attachment[] = files.map((file) => ({
+      id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      name: file.name,
+      size: file.size,
+      type: file.type,
+      url: URL.createObjectURL(file), // Creates a temporary local URL
+    }))
 
     const message: Message = {
       id: Date.now().toString(),
       sender: 'user',
       content: content.trim(),
       timestamp: 'Just now',
+      attachments: attachments.length > 0 ? attachments : undefined,
     }
 
     selectedTicket.value.messages.push(message)
